@@ -14,21 +14,27 @@
 .logo {
 display: flex;
 margin: 2%;
-
 }
+
 
 
 .logo img {
-width: 2.5%;
-height: 2.5%;
-margin-left: 1%;
-margin-top: .6%;
+
+
+      height: 4vh;
+        margin-left: 1%;
+        margin-top: .6%;
+        position: fixed;
+        top: 3%;
+        left: 0;
+        
 }
+
 
 
 .logo-header {
 
-    margin-left: 1.2%;
+    margin-left: 2%;
    
 }
 
@@ -79,8 +85,24 @@ article p {
     height: 65%;
     width: 65%;
     position: absolute;
-    top: 23%;
-    left: 34%;
+    top: 17%;
+    left: 38%;
+    animation-name: poeple_bewegen;
+    animation: poeple_bewegen 3s ease-in-out infinite;
+}
+
+@keyframes  poeple_bewegen {
+
+    from {
+
+      top: 0;
+    }
+    
+    to {
+
+        topt: 70%;
+    }
+
 }
 
 article a {
@@ -427,8 +449,9 @@ margin-top: 6%;
 .para-box ul li h4 {
 
        
-       font-size: 7rem;
+       font-size: 4.5rem;
        font-family: 'Roboto', sans-serif;
+       color:#dddddd ;
        margin-bottom: 12%;
        padding-top: 0;
        padding-bottom: 3%;
@@ -441,6 +464,8 @@ margin-top: 6%;
 }
 
 .para-box ul li p {
+    
+    
     font-size: 1.5rem;
     font-family: 'Roboto', sans-serif;
     text-align: left;
@@ -472,8 +497,8 @@ aside {
 
 .rahmen li:first-of-type {
 
-    color: red;
-    font-size: 7rem;
+    color: #dddddd;
+    font-size: 4.5rem;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     padding-bottom: 9%;
@@ -522,14 +547,14 @@ aside {
 
 .rahmen2-rest ul li:nth-of-type(2) img{
 
-    height: 9vh;
+    height: 5vh;
 }
 
 .sixth-part ul li:first-of-type {
     font-size: 4.5rem;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
-    color: limegreen;
+    color:#dddddd ;
     margin-bottom: 7% ;
     
 
@@ -577,12 +602,17 @@ aside {
     margin-left: 8%;
 }
 
+.rahmen4-box img {
+
+    height: 5vh;
+}
+
 .rahmen4-box ul li:first-of-type {
 
     font-size: 4.5rem;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
-    color: red;
+    color: #dddddd;
     padding-bottom: 8%;
 
 }
@@ -593,6 +623,11 @@ aside {
     font-size: 1.4rem;
     font-family: 'Roboto', sans-serif;
     padding: 6% 0;
+}
+
+.rahmen4-box ul li:nth-of-type(2) {
+
+    
 }
 
 
@@ -626,6 +661,7 @@ input {
     font-size: 1.2rem;
     font-family: 'Roboto', sans-serif;
     background-color:  #FFF   ;
+    box-shadow: 2px 5px rgb(167, 91, 91);
 }
 
 .button {
@@ -640,16 +676,65 @@ input {
     
 }
 
+.button:hover {
+
+    background-image: linear-gradient( to right, #ff3571, #3C30FF);
+}
+
 .button a {
 
     color: white;
     font-size: 1.0rem;
     font-family: 'Roboto', sans-serif;
+    text-decoration: none;
 }
 
 footer {
-display: flex;
-justify-content: flex-start;
-align-items: center;
-margin-left: 10%;
+    
+    
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 10%;
+    font-family: 'Roboto', sans-serif;
+}
+
+footer img {
+  
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: opacity 7s ease-in-out;
+  
+}
+
+@keyframes pulse {
+    0% {
+      opacity:1;
+    }
+    14% {
+      opacity:1;
+    }
+    28% {
+      opacity:0;
+    }
+    42% {
+      opacity:0;
+    }
+    70% {
+      opacity:0;
+    }
+}
+
+footer img {
+
+    
+        animation-name: pulse; 
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-duration: 1s;
+        animation-direction: alternate;
+      
+      
+
 }
